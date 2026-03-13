@@ -51,32 +51,3 @@ La noche está estrellada y ella no está conmigo."""
 
 poema_minuscula = poema.lower()
 print(poema_minuscula)
-<<<<<<< HEAD
-
-## tiene que ingresar 100 nombrs en mayuscula
-mensaje = "hola kace progrmando o ke hace"
-## Capitalize a que la primera letra de cada palabra sea mayuscula
-mensajeCorrecto = mensaje.capitalize()
-print(mensajeCorrecto)
-
-## las fliapntes aventuras de el gato
-titulo = "Las flipantes aventuras de el gato con bolson magico y alfredo"
-tituloCorrecto = titulo.title()
-print(tituloCorrecto)
-
-# swapcase permite camboar el orden entre mayusculas y minusculas
-swapCaseTitulo = tituloCorrecto.swapcase()
-print(swapCaseTitulo)
-
-## metodos de validacion
-# false numeros o espacio
-# true tiene solo letras
-
-numero = "512"
-solo_letras = "El chico del apartamentos"
-Coro = "piribiri_ban_ban"
-
-quieroSololetras = numero.isalpha()
-print(quieroSololetras)
-=======
->>>>>>> upperCaseLowerCase
