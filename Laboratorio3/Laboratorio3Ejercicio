@@ -1,0 +1,65 @@
+# Historial de conversiones
+historial = []
+
+while True:
+    print("\n--- CONVERSOR DE UNIDADES ---")
+    print("1. Metros a Kilómetros")
+    print("2. Kilogramos a Libras")
+    print("3. Celsius a Fahrenheit")
+    print("4. Ver historial")
+    print("5. Salir")
+
+    opcion = input("Seleccione una opción: ")
+
+    match opcion:
+        case "1":
+            valor = input("Ingrese metros: ")
+            
+            # Validación
+            if valor.replace('.', '', 1).isdigit():
+                metros = float(valor)
+                km = metros / 1000
+                resultado = f"{metros} m = {km} km"
+                print(resultado)
+                historial.append(resultado)
+            else:
+                print("Entrada inválida")
+
+        case "2":
+            valor = input("Ingrese kilogramos: ")
+            
+            if valor.replace('.', '', 1).isdigit():
+                kg = float(valor)
+                lb = kg * 2.20462
+                resultado = f"{kg} kg = {lb} lb"
+                print(resultado)
+                historial.append(resultado)
+            else:
+                print("Entrada inválida")
+
+        case "3":
+            valor = input("Ingrese grados Celsius: ")
+            
+            if valor.replace('.', '', 1).isdigit():
+                c = float(valor)
+                f = (c * 9/5) + 32
+                resultado = f"{c} °C = {f} °F"
+                print(resultado)
+                historial.append(resultado)
+            else:
+                print("Entrada inválida")
+
+        case "4":
+            print("\n--- HISTORIAL ---")
+            if len(historial) == 0:
+                print("No hay conversiones aún")
+            else:
+                for i, dato in enumerate(historial, 1):
+                    print(f"{i}. {dato}")
+
+        case "5":
+            print("Saliendo del programa...")
+            break
+
+        case _:
+            print("Opción no válida")
